@@ -1,0 +1,17 @@
+type Movie {
+  id: Int!
+  imdb_code: String!
+  title: String!
+  title_english: String!
+  title_long: String!
+  year: Int!
+  rating: Float!
+  runtime: Int!
+  genres: [String]!
+  summary: String!
+  medium_cover_image: String!
+}
+
+type Query {
+  movies(limit: Int!, rating: Float!): [Movie]!
+}
